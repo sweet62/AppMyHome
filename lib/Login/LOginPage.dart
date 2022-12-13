@@ -183,8 +183,9 @@ class LoginPage extends StatelessWidget {
             }
           }
           PushToJsonTest("${row.colAt(1)}", "${row.colAt(2)}", "${row.colAt(3)}", "${row.colAt(4)}", "${row.colAt(5)}", "${row.colAt(7)}", "${row.colAt(0)}", "${row.colAt(6)}", "${row.colAt(8)}", "${row.colAt(9)}", "$adminEmail");
-          // Для входа в чат
           addUser("${row.colAt(0)}", "${row.colAt(1)}", "${row.colAt(3)}", "${row.colAt(4)}", "${row.colAt(5)}", "${row.colAt(7)}", "${row.colAt(6)}", "${row.colAt(8)}", "${row.colAt(9)}");
+          // getUsers();
+          // Для входа в чат
           logged = true;
         }
       }
@@ -193,6 +194,7 @@ class LoginPage extends StatelessWidget {
        // runApp(MyApp());
         await conn.close();
         print("con close");
+        getUsers();
         return runApp(MyApp());
       }
       else{

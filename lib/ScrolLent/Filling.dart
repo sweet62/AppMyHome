@@ -46,6 +46,7 @@ class _FilingState extends State<Filing> {
   TextEditingController ControlHeadName = TextEditingController();
   TextEditingController ControlImage = TextEditingController();
 
+
   @override
   void initState() {
     super.initState();
@@ -106,19 +107,19 @@ class _FilingState extends State<Filing> {
 
   @override
   void getUserTest() async {
+  //   final directory = await pathProvider.getApplicationSupportDirectory();
+  //   final fileDirectory = directory.path + '/datasTest.json';
+  //   final file = File(fileDirectory);
 
-    final directory = await pathProvider.getApplicationSupportDirectory();
-    final fileDirectory = directory.path + '/datasTest.json';
-    final file = File(fileDirectory);
+  //   final json = jsonDecode(await file.readAsString());
 
-    final json = jsonDecode(await file.readAsString());
-
-    print(json);
-    UsersedTest nikita = UsersedTest.fromJson(json['user']);
-    status = nikita.stateAdmin;
-    print("adminEmail = ${nikita.adminEmail}");
+  //   print(json);
+  //   UsersedTest nikita = UsersedTest.fromJson(json['user']);
+  //   status = nikita.stateAdmin;
+  //   print("adminEmail = ${nikita.adminEmail}");
+  // }
   }
-
+  
   @override
   getValue() async {
     final conn = await MySQLConnection.createConnection(

@@ -74,40 +74,43 @@ class _ChatsState extends State<Chats> {
                       color: purpleColor,
                       child: SingleChildScrollView(
                         child: Column(children: [
-                          GestureDetector(
-                            dragStartBehavior: DragStartBehavior.down,
-                            onTap: () {
-                              if (myId != '0') {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => GeneralPage(
-                                        currentUserId: myId,
-                                        currentName: myUserName,
-                                        currentImage: myUrlAvatar,
-                                        generalId: idGeneral,
-                                        generalName: name,
-                                        generalImage: generalUrlAvatar)));
-                              } else {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) => AlertDialog(
-                                          title: Text("Предупреждение"),
-                                          content:
-                                              Text("Вы не выполнили вход!"),
-                                          actions: [
-                                            TextButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text('ОК', style: TextStyle(color: purpleColor)))
-                                          ],
-                                        ));
-                              }
-                            },
-                            child: Card(
-                              elevation: 5,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(25))),
+                          Card(
+                            elevation: 5,
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25))),
+                            child: InkWell(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(25)),
+                              onTap: () {
+                                if (myId != '0') {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => GeneralPage(
+                                          currentUserId: myId,
+                                          currentName: myUserName,
+                                          currentImage: myUrlAvatar,
+                                          generalId: idGeneral,
+                                          generalName: name,
+                                          generalImage: generalUrlAvatar)));
+                                } else {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                            title: Text("Предупреждение"),
+                                            content:
+                                                Text("Вы не выполнили вход!"),
+                                            actions: [
+                                              TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text('ОК',
+                                                      style: TextStyle(
+                                                          color: purpleColor)))
+                                            ],
+                                          ));
+                                }
+                              },
                               child: ListTile(
                                 // Общий чат
                                 contentPadding: EdgeInsets.all(10),
@@ -123,39 +126,43 @@ class _ChatsState extends State<Chats> {
                               ),
                             ),
                           ),
-                          InkWell(
-                            onTap: () {
-                              if (myId != '0') {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => GeneralPage(
-                                        currentUserId: myId,
-                                        currentName: myUserName,
-                                        currentImage: myUrlAvatar,
-                                        generalId: idGeneral2,
-                                        generalName: name2,
-                                        generalImage: generalUrlAvatar)));
-                              } else {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) => AlertDialog(
-                                          title: Text("Предупреждение"),
-                                          content:
-                                              Text("Вы не выполнили вход!"),
-                                          actions: [
-                                            TextButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text('ОК', style: TextStyle(color: purpleColor)))
-                                          ],
-                                        ));
-                              }
-                            },
-                            child: Card(
-                              elevation: 5,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(25))),
+                          Card(
+                            elevation: 5,
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25))),
+                            child: InkWell(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(25)),
+                              onTap: () {
+                                if (myId != '0') {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => GeneralPage(
+                                          currentUserId: myId,
+                                          currentName: myUserName,
+                                          currentImage: myUrlAvatar,
+                                          generalId: idGeneral2,
+                                          generalName: name2,
+                                          generalImage: generalUrlAvatar)));
+                                } else {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                            title: Text("Предупреждение"),
+                                            content:
+                                                Text("Вы не выполнили вход!"),
+                                            actions: [
+                                              TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text('ОК',
+                                                      style: TextStyle(
+                                                          color: purpleColor)))
+                                            ],
+                                          ));
+                                }
+                              },
                               child: ListTile(
                                 // Подъезд №2
                                 contentPadding: EdgeInsets.all(10),
@@ -171,39 +178,43 @@ class _ChatsState extends State<Chats> {
                               ),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              if (myId != '0') {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => GeneralPage(
-                                        currentUserId: myId,
-                                        currentName: myUserName,
-                                        currentImage: myUrlAvatar,
-                                        generalId: idGeneral3,
-                                        generalName: name3,
-                                        generalImage: generalUrlAvatar)));
-                              } else {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) => AlertDialog(
-                                          title: Text("Предупреждение"),
-                                          content:
-                                              Text("Вы не выполнили вход!"),
-                                          actions: [
-                                            TextButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text('ОК', style: TextStyle(color: purpleColor)))
-                                          ],
-                                        ));
-                              }
-                            },
-                            child: Card(
-                              elevation: 5,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(25))),
+                          Card(
+                            elevation: 5,
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25))),
+                            child: InkWell(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(25)),
+                              onTap: () {
+                                if (myId != '0') {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => GeneralPage(
+                                          currentUserId: myId,
+                                          currentName: myUserName,
+                                          currentImage: myUrlAvatar,
+                                          generalId: idGeneral3,
+                                          generalName: name3,
+                                          generalImage: generalUrlAvatar)));
+                                } else {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                            title: Text("Предупреждение"),
+                                            content:
+                                                Text("Вы не выполнили вход!"),
+                                            actions: [
+                                              TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text('ОК',
+                                                      style: TextStyle(
+                                                          color: purpleColor)))
+                                            ],
+                                          ));
+                                }
+                              },
                               child: ListTile(
                                 contentPadding: EdgeInsets.all(10),
                                 // "УК"
@@ -219,33 +230,37 @@ class _ChatsState extends State<Chats> {
                               ),
                             ),
                           ),
-                          GestureDetector(
-                            onTap: () {
-                              if (myId != '0') {
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => const OneChats()));
-                              } else {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) => AlertDialog(
-                                          title: Text("Предупреждение"),
-                                          content:
-                                              Text("Вы не выполнили вход!"),
-                                          actions: [
-                                            TextButton(
-                                                onPressed: () {
-                                                  Navigator.pop(context);
-                                                },
-                                                child: Text('ОК', style: TextStyle(color: purpleColor)))
-                                          ],
-                                        ));
-                              }
-                            },
-                            child: Card(
-                              elevation: 5,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(25))),
+                          Card(
+                            elevation: 5,
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(25))),
+                            child: InkWell(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(25)),
+                              onTap: () {
+                                if (myId != '0') {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => const OneChats()));
+                                } else {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                            title: Text("Предупреждение"),
+                                            content:
+                                                Text("Вы не выполнили вход!"),
+                                            actions: [
+                                              TextButton(
+                                                  onPressed: () {
+                                                    Navigator.pop(context);
+                                                  },
+                                                  child: Text('ОК',
+                                                      style: TextStyle(
+                                                          color: purpleColor)))
+                                            ],
+                                          ));
+                                }
+                              },
                               child: ListTile(
                                 // Личные сообщения
                                 contentPadding: EdgeInsets.all(10),
@@ -277,26 +292,26 @@ class _ChatsState extends State<Chats> {
     );
   }
 
-  Widget buildUser(User user) {
-    return ListTile(
-      leading: CircleAvatar(
-        radius: 20.0,
-        backgroundImage: NetworkImage(user.urlAvatar),
-      ),
-      title: Text(user.surname),
-      subtitle: Text("${user.name} ${user.middle_name}"),
-      onTap: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => ChatPage(
-                currentUserId: myId,
-                friendId: user.idUser!,
-                friendName: user.name,
-                friendSurname: user.surname,
-                friendMiddle_name: user.middle_name,
-                friendImage: user.urlAvatar)));
-      },
-    );
-  }
+  // Widget buildUser(User user) {
+  //   return ListTile(
+  //     leading: CircleAvatar(
+  //       radius: 20.0,
+  //       backgroundImage: NetworkImage(user.urlAvatar),
+  //     ),
+  //     title: Text(user.surname),
+  //     subtitle: Text("${user.name} ${user.middle_name}"),
+  //     onTap: () {
+  //       Navigator.of(context).push(MaterialPageRoute(
+  //           builder: (context) => ChatPage(
+  //               currentUserId: myId,
+  //               friendId: user.idUser,
+  //               friendName: user.name,
+  //               friendSurname: user.surname,
+  //               friendMiddle_name: user.middle_name,
+  //               )));
+  //     },
+  //   );
+  // }
 
   Widget buildText(String text) => Center(
         child: Text(
